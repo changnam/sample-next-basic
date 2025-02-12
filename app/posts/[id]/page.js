@@ -1,4 +1,5 @@
 import Counter from "@/component/Counter";
+import CounterClientOnly from "@/component/CounterClientOnly";
 
 // Generates static HTML + JSON at build time
 export async function generateStaticParams() {
@@ -17,6 +18,8 @@ export async function generateStaticParams() {
         <h1>{data.title}</h1>
         {/*<button onClick={() => alert("테스트")}>클릭</button>*/}
         <Counter />
+        <hr/>
+        <CounterClientOnly />
     </>
     );
   }
