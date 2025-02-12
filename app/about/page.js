@@ -5,6 +5,8 @@ import Link from "next/link";
 import Counter from "@/component/Counter";
 import {useEffect, useState} from "react";
 
+export const dynamic = "force-dynamic";
+
 export default function About() {
   const [id,setId] = useState(0);
   useEffect(() => {
