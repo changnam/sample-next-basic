@@ -5,7 +5,7 @@ export async function generateStaticParams() {
   
   export default async function Page({ params }) {
     debugger;
-    const data = await fetch(`http://localhost:4000/api/posts/${params.id}`).then((res) =>
+    const data = await fetch(`http://localhost:4000/api/posts/${params.id}`,{cache: "no-store"}).then((res) =>
       res.json()
     );
   
