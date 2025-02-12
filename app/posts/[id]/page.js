@@ -1,3 +1,5 @@
+import Counter from "@/component/Counter";
+
 // Generates static HTML + JSON at build time
 export async function generateStaticParams() {
     return [{ id: '1' }, { id: '2' }];
@@ -11,8 +13,10 @@ export async function generateStaticParams() {
   
     return (
     <>
+        <div>서버컴포넌트</div>
         <h1>{data.title}</h1>
         {/*<button onClick={() => alert("테스트")}>클릭</button>*/}
+        <Counter />
     </>
     );
   }
